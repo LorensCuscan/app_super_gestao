@@ -24,7 +24,9 @@
     <select name="motivo_contato_id" class="{{ $classe }}">
         <option value="">Qual o motivo do contato?</option>
         @foreach ($motivo_contato as $motivo)
-            <option value="{{ $motivo->id }}" {{ old('motivo_contato_id') == $motivo->id ? 'selected' : '' }}>{{ $motivo->motivo_contato }}</option>
+           <option value="{{ $motivo->id }}" @selected(old('motivo_contato_id') == $motivo->id)>
+    {{ $motivo->motivo_contato }}
+</option>
         @endforeach
     </select>
     {{ $errors->has('motivo_contato_id') ? $errors->first('motivo_contato_id') : ''}}
