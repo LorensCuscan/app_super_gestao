@@ -1,0 +1,7 @@
+
+.borda-branca {
+    border: 1px solid white !important;
+    background-color: transparent;
+    color: white;
+    margin-bottom: 5px;
+}
